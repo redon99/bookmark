@@ -23,7 +23,7 @@ This is a solution to the [Bookmark landing page challenge on Frontend Mentor](h
 
 ### What I learned
 
-During this project I practiced most of the things I learned before such as how to write HTML5 following BEM Methodology and CSS3 by using a CSS preprocessor such as SASS (using SCSS syntax). Also i tried to build this project by seperating into different sass files and components (not using the 7-1 architecure since this is not a big project.)
+During this project I practiced most of the things I learned before such as how to write HTML5 following BEM Methodology and CSS3 by using a CSS preprocessor such as SASS (using SCSS syntax). Also I tried to build this project by seperating into different sass files and components (not using the 7-1 architecure since this is not a big project.)
 Also for this project I coded only on plain JavaScript using ES6 syntax and features.
 
 ### Continued development
