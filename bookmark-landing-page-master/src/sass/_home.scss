@@ -1,0 +1,303 @@
+@import '../sass/utilities';
+
+// Section overview-------------------------------
+.overview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: end;
+  align-items: center;
+  margin-top: 8rem;
+  padding-inline: 2rem;
+  margin-bottom: 10rem;
+  color: #1f223a;
+
+  &__content {
+    padding-right: 5rem;
+    @media only screen and (max-width: $bp-md) {
+      text-align: center;
+      padding-right: 0;
+    }
+  }
+
+  &__img {
+    &::after {
+      content: '';
+      height: 20rem;
+      width: 30rem;
+      color: $color-dark-blue;
+    }
+    @media only screen and (max-width: $bp-md) {
+      grid-row: 1 / 2;
+      justify-self: center;
+    }
+  }
+
+  @media only screen and (max-width: $bp-md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Section features-------------------------------
+
+.features {
+  padding-inline: 2rem;
+  &__title {
+    text-align: center;
+    padding: 0 4rem;
+    margin-bottom: 8rem;
+
+    @media only screen and (max-width: $bp-sm) {
+      margin-bottom: 5rem;
+      padding: 0;
+    }
+  }
+
+  &__tab-container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-inline: 10rem;
+    // gap: 10rem;
+    // border-bottom: 1px solid #868e96;
+    padding-bottom: 1.5rem;
+    margin-bottom: 6rem;
+
+    @media only screen and (max-width: $bp-sm) {
+      grid-template-columns: 1fr;
+      padding-inline: 5rem;
+      row-gap: 2rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    font-size: 1.6rem;
+    border: none;
+    border-bottom: 1px solid #868e96;
+    padding-inline: 5rem;
+    padding-bottom: 3rem;
+    background-color: transparent;
+    color: #868e96;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      color: $color-soft-red;
+    }
+
+    &--active {
+      border-bottom: 4px solid $color-soft-red;
+      color: #1f223a;
+    }
+
+    @media only screen and (max-width: $bp-sm) {
+      padding-bottom: 1rem;
+    }
+  }
+
+  &__content {
+    display: none;
+  }
+
+  &__content--active {
+    display: grid;
+    column-gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    align-items: center;
+    justify-items: center;
+
+    @media only screen and (max-width: $bp-sm) {
+      gap: 4rem;
+      justify-items: center;
+    }
+  }
+
+  &__icon {
+    @media only screen and (max-width: $bp-sm) {
+      width: 80%;
+    }
+  }
+
+  &__text {
+    padding-right: 10rem;
+
+    @media only screen and (max-width: $bp-md) {
+      padding-right: 0;
+    }
+
+    @media only screen and (max-width: $bp-sm) {
+      padding-right: 0;
+    }
+  }
+
+  &-btn {
+    display: none;
+  }
+}
+
+// Section downloads-------------------------------
+
+.downloads {
+  &__title {
+    text-align: center;
+    padding: 0 4rem;
+    margin-top: 20rem;
+    margin-bottom: 8rem;
+
+    @media only screen and (max-width: $bp-sm) {
+      margin-top: 4rem;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 4rem;
+    justify-items: center;
+    padding-inline: 10rem;
+    margin-bottom: 10rem;
+
+    @media only screen and (max-width: $bp-sm) {
+      padding-inline: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding: 2.5rem;
+
+    box-shadow: 0 1rem 2rem rgba(#000, 0.1);
+
+    &--2 {
+      transform: translateY(4rem);
+    }
+
+    &--3 {
+      transform: translateY(8rem);
+    }
+  }
+}
+
+// Section FAQ-------------------------------
+
+.faq {
+  margin: 0 auto;
+  padding: 0 4rem;
+  margin-bottom: 10rem;
+
+  @media only screen and (max-width: $bp-sm) {
+    margin-bottom: 5rem;
+  }
+
+  &__title {
+    text-align: center;
+    margin-top: 20rem;
+    margin-bottom: 8rem;
+
+    @media only screen and (max-width: $bp-sm) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__containers {
+    margin-bottom: 4rem;
+  }
+
+  &__container {
+    border-bottom: 1px solid #868e96;
+    padding: 1.5rem 0;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-soft-red;
+    }
+  }
+
+  &__heading {
+    transition: color 0.2s;
+  }
+
+  &__btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.1s;
+  }
+
+  &__active &__btn {
+    transform: rotate(180deg);
+  }
+
+  &__text {
+    display: none;
+  }
+
+  &__active &__text {
+    display: block;
+  }
+
+  &__btn-primary {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+// Section CONTACT US-------------------------------
+
+.contact {
+  text-align: center;
+  background-color: $color-soft-blue;
+
+  &__text {
+    display: block;
+    color: #fff;
+
+    &--small {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding-top: 7rem;
+      padding-bottom: 2rem;
+    }
+
+    &--big {
+      font-size: 2.4rem;
+      padding-bottom: 2rem;
+    }
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding-bottom: 6rem;
+
+    &--email {
+      border: none;
+      border-radius: 3px;
+      font-size: 1.6rem;
+      padding: 1rem 2rem;
+    }
+
+    @media only screen and (max-width: $bp-sm) {
+      flex-direction: column;
+      gap: 2rem;
+      align-items: stretch;
+      padding-inline: 1rem;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.heading {
+  &-primary {
+    // color: #1f223a;
+    font-size: 5rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.2;
+
+    @media only screen and (max-width: $bp-sm) {
+      font-size: 4rem;
+    }
+  }
+
+  &-secondary {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+
+    @media only screen and (max-width: $bp-sm) {
+      text-align: center;
+      font-size: 2.5rem;
+    }
+  }
+}
+
+.paragraph__primary {
+  color: #868e96;
+  margin-bottom: 4rem;
+}
+
+.paragraph-secondary {
+  color: #868e96;
+  font-size: 1.4rem;
+}
+
+.header__nav {
+  font-size: 1.4rem;
+
+  &-link {
+    color: #333;
+  }
+}
